@@ -11,10 +11,11 @@ services:
       POSTGRES_DB: pessoal
 
   django:
-    image: site-pessoal
+    build: .
     restart: always
-    command: gunicorn site_pessal.wsgi:application --bind 0.0.0.0:8000 --workers 3
+    command: gunicorn site_pessoal.wsgi:application --bind 0.0.0.0:8000 --workers 3
     volumes:
+      - ./:/usr/src/app
       - static:/usr/src/app/static
       - media:/usr/src/app/media
     expose:
@@ -27,6 +28,7 @@ services:
     volumes:
       - static:/usr/src/app/static
       - media:/usr/src/app/media
+      - ./nginx/:/etc/nginx/conf.d/
     ports:
       - 80:80
     depends_on:

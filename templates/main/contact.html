@@ -17,7 +17,7 @@
     <div class="c-screen-contact o-screen-contact">
 
       <div class="o-screen-contact__col-info">
-        <a class="c-screen-contact__item" href="mailto:mailme@gmail.com">{{ email }}</a>
+        <a class="c-screen-contact__item">{{ email }}</a>
         <a class="c-screen-contact__item">skype: {{ skype }}</a>
         <ul class="c-socials u-mb-35">
           <li class="c-socials__item">
@@ -41,28 +41,6 @@
           </a>
         </li>
         </ul>
-        <ul class="c-screen-contact__address">
-          <li>Laboratório de Tecnologias da Tomada de Decisão</li>
-          <li>Faculdade de Tecnologia</li>
-          <li>Departamento do Engenharia Eletrica</li>
-          <li>Universidade de Brasilia</li>
-        </ul>
-      </div>
-      <div class="o-screen-contact__col-form">
-        <form class="c-form js-form-validation" action="{% url 'sendmessage' %}" method="post">
-            {% csrf_token %}
-          <label for="contact-name">Your name</label>
-          <input class="c-form__field" name="name" type="text" placeholder="Mary Jane, for example" required>
-          <label for="contact-email">Your e-mail</label>
-          <input class="c-form__field" name="email" type="email" placeholder="yourmail@mail.com" required>
-          <label for="contact-message">Message text</label>
-          <textarea class="c-form__field" id="contact-message" name="message" placeholder="Write here your question or interesting offer" required></textarea>
-          <fieldset class="u-text-right">
-              <script src='https://www.google.com/recaptcha/api.js'></script>
-              <div class="g-recaptcha" data-sitekey="6Ld2lKcUAAAAAABujipgFhGReSwKpNvD3zwaOVym"></div>
-            <button class="c-button c-button--primary" type="submit" name="contact-submit">send a message</button>
-          </fieldset>
-        </form>
       </div>
     </div>
   </div>

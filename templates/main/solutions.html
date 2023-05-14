@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="o-main">
+<!-- PUBLICATIONS -->
+  <div id="section-publications" class="o-container   wow1 fadeIn"  data-contentPosition="4">
+
+    <div class="c-screen-publications o-screen-publications">
+      <div class="o-screen-publications__col">
+        <div class="c-article">
+
+            {% for book in books %}
+          <div class="c-article__item">
+            <div class="c-article__body">
+              <h3 class="c-article__header">{{ book.title }}</h3>
+              <div class="c-article__button">
+                <a href="{% url 'books' book.id %}" class="c-button c-button--simple-text">Solutions</a><i class="icofont icofont-external-link"></i>
+              </div>
+            </div>
+          </div>
+            {% endfor %}
+
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+{% endblock %}

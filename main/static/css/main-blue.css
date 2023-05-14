@@ -278,8 +278,8 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: stretch;
       align-items: stretch; }
   .o-screen-about__col {
@@ -287,8 +287,8 @@ p {
         flex-basis: 100%; }
     @media (min-width: 600px) {
       .o-screen-about__col {
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; } }
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
 
 .o-screen-education {
   display: -ms-flexbox;

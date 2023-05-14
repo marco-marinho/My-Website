@@ -12,18 +12,15 @@
           <div class="c-card__item js-toggle-modal">
             <div class="c-card__sizer"></div>
             <div class="c-card__inner">
-              <div class="c-card__icon">
-                <i class="icofont {{ topic.icon }}"></i>
-              </div>
               <h4 class="c-card__header">{{ topic.research }}</h4>
               <div class="c-card__content js-card-content">
                 <p class="c-card__text">{{ topic.short_description }}</p>
               </div>
               <div class="c-card__modal-content js-card-modal-content">
                 <p class="c-card__text">{{ topic.full_description }}</p>
-                  {%  if topic.link %}
+                  {%  if topic.links %}
                 <p class="c-card__link-caption">Check my project:</p>
-                <a class="c-card__link" href="#">{{ topic.link }}</a>
+                <a class="c-card__link" href="{{ topic.links }}">{{ topic.links }}</a>
                   {%  endif %}
               </div>
             </div>
@@ -37,7 +34,7 @@
             <div class="c-card__sizer"></div>
             <div class="c-card__inner">
               <div class="c-card__content">
-                <p class="c-card__text">I am really interested in all of these topics, if you fell like we can collaborate feel free to contact me.</p>
+                <p class="c-card__text">These are some projects personal projects / repositories I have worked on.</p>
               </div>
             </div>
           </div>

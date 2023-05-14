@@ -5,14 +5,8 @@
 <main class = 'o-main'>
     <div class="o-container">
         <!-- ABOUT SECTION-->
-    <div id="section-about" class="c-screen-about o-screen-about" data-contentPosition="1">
-      <div class="o-screen-about__col">
-        <figure class="c-screen-about__image">
-          <span></span>
-          <img src="{% static 'pic/marco2.jpg' %}" alt="">
-        </figure>
-      </div>
-      <div class="o-screen-about__col">
+    <div id="section-about" class="c-screen-education o-screen-education" data-contentPosition="1">
+      <div class="o-screen-education__col">
         <h1 class="u-mb-5">{{ dados.nome }}</h1>
         <span class="c-screen-about__caption">{{ dados.titulo }}</span>
         <ul class="c-socials u-mb-35">
@@ -39,12 +33,6 @@
         </ul>
         <p class="u-mb-10"><span class="u-block">Hello!</span>{{ dados.intro }}</p>
 
-        <a class="c-button c-button--bold-text u-mb-30" href="{% static 'files/cv.pdf' %}">download cv</a>
-
-        <h3 class="u-mb-10">Latest publications:</h3>
-          {% for publication in publications %}
-              <a href="{{ publication.file.url }}"><p class="u-mb-10" >{{ publication.title }}</p></a>
-          {% endfor %}
       </div>
     </div>
     </div>

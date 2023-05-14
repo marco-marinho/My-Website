@@ -26,6 +26,22 @@ class Publication(models.Model):
         return self.title
 
 
+class Book(models.Model):
+    title = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+
+class Solution(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    chapter = models.TextField()
+    file = models.FileField(upload_to='solutions')
+
+    def __str__(self):
+        return self.book.title + ' - ' + self.chapter
+
+
 class Research(models.Model):
     research = models.CharField(max_length=200)
     short_description = models.TextField()

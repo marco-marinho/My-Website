@@ -1,0 +1,9 @@
+.gitignore
+.idea/dataSources.local.xml
+.idea/workspace.xml
+main/__pycache__/
+main/migrations/0003_auto_20230514_0816.py
+main/migrations/0004_solution.py
+main/migrations/0005_auto_20230514_1232.py
+main/migrations/__pycache__/
+site_pessoal/__pycache__/

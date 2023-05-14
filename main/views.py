@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_list_or_404, redirect
-from .models import Education, Publication, Research, Teaching, Resource
+from .models import Education, Publication, Research, Teaching, Resource, Solution, Book
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
@@ -63,6 +63,26 @@ def publications(request):
     }
 
     return render(request, 'main/publications.html', context)
+
+
+def solutions(request):
+
+    books = Book.objects.order_by('title')
+    context = {
+        'books': books,
+    }
+
+    return render(request, 'main/solutions.html', context)
+
+
+def books(request, bookid):
+
+    solutions = get_list_or_404(Solution, book__id=bookid)
+    context = {
+        'solutions': solutions,
+    }
+
+    return render(request, 'main/books.html', context)
 
 
 def teaching(request):
